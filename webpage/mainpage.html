@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieTunesHub</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/clapper.png">
 </head>
 
 <body>
@@ -13,11 +14,10 @@
         <div class="logo">MovieTunesHub</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">Romantic</a></li>
-                <li><a href="#">Thriller</a></li>
+                <li><a href="#" onclick="filterMovies('all')">All</a></li>
+                <li><a href="#" onclick="filterMovies('tamil')">Tamil</a></li>
+                <li><a href="#" onclick="filterMovies('malayalam')">Malayalam</a></li>
+                <li><a href="#" onclick="filterMovies('english')">English</a></li>
             </ul>
         </nav>
         <div class="search">
@@ -26,114 +26,118 @@
     </header>
     <main>
         <section class="intro">
-            <h1>Stream Movie Trailers</h1>
-            <p>Need some help deciding what to watch before all your popcorn runs out? We've got you covered! With this
-                guide you can find the best movies to watch online across all languages, eras, and genres all under one
-                roof. From seeing where to watch movies for free to keeping track of all the new movie releases, our
-                easy-to-use guide is your go-to hub for all things movies.</p>
+            <h1>Movie Song Playlist</h1>
+            <p>your go-to destination for exploring and enjoying the best movie songs from Tamil, Malayalam, and English films. Our extensive playlists offer a diverse range of tracks, from the latest chart-toppers to timeless classics. Whether you're looking to relive the magic of your favorite movies through their iconic soundtracks or discover new tunes, MovieTunesHub has got you covered. Dive into our curated collections and let the music transport you to the world of cinema!
+
+            </p>
         </section>
         <section class="filter">
-            <button>All</button>
-            <button>Tamil</button>
-            <button>English</button>
+            <button onclick="filterMovies('all')">All</button>
+            <button onclick="filterMovies('tamil')">Tamil</button>
+            <button onclick="filterMovies('malayalam')">Malayalam</button>
+            <button onclick="filterMovies('english')">English</button>
             <!-- Add more filters as needed -->
         </section>
         <section class="movies">
             <a href="https://youtu.be/-boPEbe6iaI?si=lA3W-Adi6McavyKR" target="_blank">
-                <div class="movie"><img src="img/kalki1.jpeg" alt="Kalki"><span>kalki</span></div>
+                <div class="movie" data-category="tamil"><img src="img/kalki1.jpeg" alt="Kalki"><span>kalki</span></div>
             </a>
             <a href="https://youtu.be/Y5BeWdODPqo?si=KDNTWYDoKkO5lc-p" target="_blank">
-                <div class="movie"><img src="img/jailer.jpeg" alt="Jailer"><span>Jailer</span></div>
+                <div class="movie" data-category="tamil"><img src="img/jailer.jpeg" alt="Jailer"><span>Jailer</span></div>
             </a>
             <a href="https://youtu.be/vD7pncDBf70?si=xLh9bnTT5KPLt2jm" target="_blank">
-                <div class="movie"><img src="img/puspa.jpeg" alt="Puspa"><span>Puspa</span></div>
+                <div class="movie" data-category="tamil"><img src="img/puspa.jpeg" alt="Puspa"><span>Puspa</span></div>
             </a>
             <a href="https://youtu.be/q5GG5HJ1hVk?si=MDizT6UJzMMdvn-l" target="_blank">
-                <div class="movie">
+                <div class="movie" data-category="tamil">
                     <img src="img/vadachennai.jpeg" alt="vadachennai"><span>vadachennai</span>
                 </div>
             </a>
             <a href="https://youtube.com/playlist?list=PLiFw3XTgaOBipBpWaVnDhkKWlZScqzhl1&si=MDaiD4XMMYYrkEzD"
                 target="_blank">
-                <div class="movie"><img src="img/vikram.jpeg" alt="Vikram"><span>Vikram</span></div>
+                <div class="movie" data-category="tamil"><img src="img/vikram.jpeg" alt="Vikram"><span>Vikram</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/raayan.jpg" alt="Raayan"><span>Raayan</span></div>
+                <div class="movie" data-category="malayalam"><img src="img/raayan.jpg" alt="Raayan"><span>Raayan</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kanguva.jpg" alt="Kanguva"><span>Kanguva</span></div>
+                <div class="movie" data-category="tamil"><img src="img/kanguva.jpg" alt="Kanguva"><span>Kanguva</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2">Raayan</div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"><span>KGF-2</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/24.jpg" alt="24">Raayan</div>
+                <div class="movie" data-category="tamil"><img src="img/24.jpg" alt="24"><span>24</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Bigil.jpg" alt="bigil">Raayan</div>
+                <div class="movie" data-category="tamil"><img src="img/Bigil.jpg" alt="bigil"><span>Bigil</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/3.jpg" alt="3">Raayan</div>
+                <div class="movie" data-category="tamil"><img src="img/3.jpg" alt="3"><span>3</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/7G Rainbow Colony.jpg" alt="7G Rainbow Colony"></div>
+                <div class="movie" data-category="tamil"><img src="img/7G Rainbow Colony.jpg" alt="7G Rainbow Colony"><span>7G rainbow colony</span></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Alaipayuthey.jpg" alt="Alaipayuthey"></div>
+                <div class="movie" data-category="tamil"><img src="img/Alaipayuthey.jpg" alt="Alaipayuthey"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Asuran.jpg" alt="Asuran"></div>
+                <div class="movie" data-category="tamil"><img src="img/Asuran.jpg" alt="Asuran"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Bangalore Days.jpg" alt="Banglore days"></div>
+                <div class="movie" data-category="malayalam"><img src="img/Bangalore Days.jpg" alt="Banglore days"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Captan Miller.jpg" alt="Captain Miller"></div>
+                <div class="movie" data-category="tamil"><img src="img/Captan Miller.jpg" alt="Captain Miller"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Charlie.jpg" alt="Charlie"></div>
+                <div class="movie" data-category="malayalam"><img src="img/Charlie.jpg" alt="Charlie"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Comrade in America.jpg" alt="Comerade in America"></div>
+                <div class="movie" data-category="malayalam"><img src="img/Comrade in America.jpg" alt="Comerade in America"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Dada.jpg" alt="Dada"></div>
+                <div class="movie" data-category="tamil"><img src="img/Dada.jpg" alt="Dada"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Dear Comrade.jpg" alt="Dear Comerade"></div>
+                <div class="movie" data-category="tamil"><img src="img/Dear Comrade.jpg" alt="Dear Comerade"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Ghilli.jpg" alt="Ghilli"></div>
+                <div class="movie" data-category="tamil"><img src="img/Ghilli.jpg" alt="Ghilli"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Guna.jpg" alt="Guna"></div>
+                <div class="movie" data-category="tamil"><img src="img/Guna.jpg" alt="Guna"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/Hey Sinamika.jpg" alt="hey Sinamika"></div>
+                <div class="movie" data-category="tamil"><img src="img/Hey Sinamika.jpg" alt="hey Sinamika"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
             <a href="" target="_blank">
-                <div class="movie"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
             </a>
-
-            <!-- Add more movies as needed -->
+            <a href="" target="_blank">
+                <div class="movie" data-category="tamil"><img src="img/kgf2.jpg" alt="KGF-2"></div>
+            </a>
+            <a href="" target="_blank">
+                <div class="movie" data-category="tamil"><img src="img/kalki1.jpeg" alt="Naiyaandi"><span>Naiyaandi</span></div>
+            </a>
         </section>
     </main>
     <footer>

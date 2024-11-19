@@ -33,4 +33,5 @@ Built with Next.js and Vite for quick rendering and performance.
 For any questions or feedback, feel free to reach out at:
 
 `Email:` johnkishore43@gmail.com
+
 `GitHub:` [https://github.com/Johnkishore11)

@@ -19,9 +19,13 @@ Built with Next.js and Vite for quick rendering and performance.
 
 ## Technologies Used 🛠️
 `Frontend Framework:` Next.js
+
 `Build Tool:` Vite
+
 `Styling:` Material UI
+
 `API:` The Movie Database (TMDB) API
+
 ## Screenshots 📸
 
 

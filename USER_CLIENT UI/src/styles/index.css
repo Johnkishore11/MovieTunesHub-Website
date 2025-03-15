@@ -1,0 +1,320 @@
+/* --------------------------- */
+/* Global Reset & Smooth Scroll */
+/* --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* Smooth scrolling for the whole page */
+}
+
+/* --------------------------- */
+/* Base Styles for HTML and Body */
+/* --------------------------- */
+html, body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  width: 100vw;
+  transition: all 0.4s ease-in-out;
+}
+
+/* --------------------------- */
+/* Root Container (Flex Layout) */
+/* --------------------------- */
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-top: 0px;
+  background-color: #ffffff;
+  transition: background 0.4s ease-in-out;
+}
+
+/* --------------------------- */
+/* Navbar Styling */
+/* --------------------------- */
+.navbar {
+  width: 100%;
+  background: linear-gradient(135deg, #1d1d1d 0%, #333333 100%);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar .navbar-logo {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #FFD700;
+  text-decoration: underline;
+}
+
+.navbar a:focus {
+  outline: 2px solid #FFD700;
+  box-shadow: 0 0 3px 2px rgba(255, 215, 0, 0.5);
+}
+
+/* --------------------------- */
+/* Page Content Section */
+/* --------------------------- */
+.page-content {
+  width: 100%;
+  flex-grow: 1;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: background 0.3s ease-in-out;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* --------------------------- */
+/* Dynamic Footer Styling */
+/* --------------------------- */
+.footer {
+  background: linear-gradient(135deg, #333333 0%, #1d1d1d 100%);
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  margin-top: auto;
+}
+
+/* --------------------------- */
+/* Button Styling */
+/* --------------------------- */
+button {
+  background: #007bff;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.1s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  animation: bounce 1.2s ease-in-out infinite;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #0056b3;
+}
+
+button:focus {
+  outline: 2px solid #0056b3;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* --------------------------- */
+/* Input Fields Styling */
+/* --------------------------- */
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  background: #f5f5f5;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+/* --------------------------- */
+/* Loading Screen Styling */
+/* --------------------------- */
+#loading-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------------- */
+/* Dark Mode Support */
+/* --------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #fff;
+  }
+  .page-content {
+    background: #1f1f1f;
+    color: #ddd;
+  }
+  input,
+  textarea {
+    background: #444;
+    color: white;
+    border: 2px solid #555;
+  }
+  button {
+    background: #0d6efd;
+  }
+  .footer {
+    background: rgba(30, 30, 30, 0.9);
+  }
+}
+
+/* --------------------------- */
+/* Responsive Design */
+/* --------------------------- */
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .page-content {
+    padding: 30px 15px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
+
+/* --------------------------- */
+/* Extra Small Device Support */
+/* --------------------------- */
+@media (max-width: 480px) {
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .page-content {
+    padding: 20px 10px;
+  }
+}
+
+/* --------------------------- */
+/* Animations */
+/* --------------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal button {
+  margin: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal button:first-child {
+  background: #007bff;
+  color: white;
+}
+
+.modal button:last-child {
+  background: #f44336;
+  color: white;
+}

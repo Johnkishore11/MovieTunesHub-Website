@@ -1,0 +1,127 @@
+/* Register Page Container */
+.register-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8); /* Light background for better contrast */
+  backdrop-filter: blur(8px); /* Subtle blur for visual appeal */
+  border-radius: 16px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Heading (Welcome Text) */
+.register-container h2 {
+  font-size: 2.5rem;
+  color: #ff6f61; /* Soft coral for a welcoming and fresh feel */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Adds some spacing for visual balance */
+}
+
+/* Subheading (Intro Text) */
+.register-container p {
+  font-size: 1.2rem;
+  color: #333; /* Dark gray for easy readability */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Input Fields Styling */
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid #ccc; /* Subtle border for input fields */
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8); /* Light background */
+  color: #333; /* Dark text color for readability */
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Input Field Focus Styling */
+.register-form input:focus,
+.register-form select:focus {
+  border: 2px solid #ff6f61; /* Coral border on focus */
+  background: rgba(255, 255, 255, 1); /* Brighter background on focus */
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7); /* Soft glow on focus */
+}
+
+/* Placeholder Text */
+.register-form input::placeholder {
+  color: rgba(0, 0, 0, 0.6); /* Darker placeholder text for visibility */
+}
+
+/* Button Styling */
+.register-form button {
+  width: 100%;
+  padding: 14px;
+  background: #ff6f61; /* Soft coral for the button */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  text-transform: uppercase;
+  margin-top: 20px; /* Adds spacing above the button */
+}
+
+.register-form button:hover {
+  background: #ff4b39; /* Darker coral on hover */
+}
+
+.register-form button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+  color: #ff4d4d; /* Red for error text */
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Login Redirect */
+.login-redirect {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login-redirect a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+  color: #e04e3a; /* Darker coral on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .register-container h2 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .register-form input,
+  .register-form select {
+    padding: 12px;
+  }
+}

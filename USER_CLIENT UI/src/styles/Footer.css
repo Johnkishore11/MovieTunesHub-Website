@@ -1,0 +1,63 @@
+/* Footer Container */
+.footer {
+  background: rgba(0, 0, 0, 0.75); /* Dark Background for travel feel */
+  backdrop-filter: blur(12px); /* Glassmorphism Effect with soft blur */
+  text-align: center;
+  padding: 25px 15px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: #e0e0e0; /* Light text for dark background */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+/* Footer Links */
+.footer nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #e0e0e0; /* Light text for readability */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Travel Hover Effect */
+.footer a:hover {
+  color: #00b4d8; /* Cyan for a travel-inspired hover */
+  background: rgba(0, 0, 0, 0.5); /* Slight darkening of background */
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.5); /* Glowing effect for hover */
+  transform: translateY(-2px); /* Slight lift on hover for interactive feel */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 1rem;
+    padding: 20px 10px;
+  }
+
+  .footer nav {
+    gap: 20px;
+  }
+
+  .footer a {
+    font-size: 1rem;
+    padding: 8px 12px; /* Adjust padding for mobile */
+  }
+}

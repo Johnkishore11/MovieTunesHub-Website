@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* global.css or styles/globals.css */
+button[data-nextjs-feedback-button] {
+  display: none !important;
+}

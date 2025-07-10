@@ -1,37 +1,36 @@
-# MoviesHub 🎥
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-MoviesHub is an engaging movie website that allows users to explore movies, view detailed information, and stay updated with the latest releases. Powered by the TMDB API, it leverages Next.js, Vite, and Material UI to deliver a fast, responsive, and visually appealing experience
+## Getting Started
 
-## Features 🌟 
-#### Search and Discover:
-Search for movies by title.
-Explore trending, top-rated, and upcoming movies.
-#### Movie Details:
-Detailed movie information, including cast, ratings, and synopsis.
-High-quality movie posters and images.
-#### Dynamic API Integration:
-Data fetched in real-time from the TMDB API.
-Optimized API calls for efficient performance.
-#### Responsive Design:
-Fully responsive UI built with Material UI, ensuring seamless usage on all devices.
-#### Fast Loading:
-Built with Next.js and Vite for quick rendering and performance.
+First, run the development server:
 
-## Technologies Used 🛠️
-`Frontend Framework:` Next.js
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-`Build Tool:` Vite
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-`Styling:` Material UI
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-`API:` The Movie Database (TMDB) API
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Screenshots 📸
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-## Contact 💬
-For any questions or feedback, feel free to reach out at:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-`Email:` johnkishore43@gmail.com
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-`GitHub:` [https://github.com/Johnkishore11)
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
